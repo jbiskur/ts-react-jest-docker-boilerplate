@@ -24,5 +24,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html"
     })
-  ]
+  ],
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000
+  }
 };
