@@ -7,6 +7,7 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
   },
+  devtool: "source-map",
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "bundle.min.js"
@@ -17,6 +18,17 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: [/\.test.tsx?$/, /setupTests.ts/],
         loader: "awesome-typescript-loader"
+      },
+      {
+        test: /\.s?css$/,
+        loaders: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          "file-loader?hash=sha512&digest=hex&name=img/[hash].[ext]",
+          "image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false"
+        ]
       }
     ]
   },

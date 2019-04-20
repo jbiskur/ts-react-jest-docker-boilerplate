@@ -1,4 +1,4 @@
-FROM node:lts-alpine as build-stage
+FROM node:10.15.0 as build-stage
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN yarn
