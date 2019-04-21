@@ -10,7 +10,8 @@ module.exports = {
     },
   },
   rules: {
-    indent: ["error", 2, { SwitchCase: 1 }],
+    indent: "off",
+    "@typescript-eslint/indent": ["error", 2, { SwitchCase: 1 }],
   },
   settings: {
     react: {

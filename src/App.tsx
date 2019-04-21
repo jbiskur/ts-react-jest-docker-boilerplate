@@ -3,7 +3,7 @@ import * as React from "react";
 import PageInterface from "./PageInterface";
 
 class App extends React.Component<PageInterface, {}> {
-  render() {
+  public render(): React.ReactNode {
     return (
       <div>
         <h1>Welcome to React with Typescript</h1>
